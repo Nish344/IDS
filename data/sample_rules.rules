@@ -1,0 +1,6 @@
+alert tcp any any <> any 80 (msg:"SQLi Test"; content:"UNION SELECT"; nocase; sid:1001;)
+alert tcp any any <> any 80 (msg:"SQLi OR 1=1"; content:" or 1=1"; nocase; sid:1002;)
+alert tcp any any <> any 80 (msg:"SQLi comment"; content:"-- "; nocase; sid:1004;)
+alert tcp any any <> any 80 (msg:"SQLi stacked queries"; content:"; drop table"; nocase; sid:1005;)
+alert tcp any any <> any 80 (msg:"SQLi SELECT *"; content:"select * from"; nocase; sid:1006;)
+
