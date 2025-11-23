@@ -13,6 +13,7 @@ dist/
 venv/
 env/
 penv/
+.venv
 
 # OS files
 .DS_Store
